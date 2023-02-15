@@ -3,6 +3,8 @@
 # Install VS Code
 https://code.visualstudio.com/Download
 
+# Install Powershell extension
+
 # Get Powershell version
 $PSVersionTable.PSVersion
 
@@ -17,18 +19,8 @@ winget install Microsoft.PowerShell
 $profile
 
 # Add check to the profile to make sure it loaded
-code $profile
-Write-Host "Profile was loaded" -ForegroundColor Green
-
-# Create profile if it doesn't exist
-if (!(Test-Path $Profile)) {
-  New-Item -Path $Profile -Type File -Force
-}
-<#
-VS Code will by default use its own separate profile; you can configure it to use the default system profile:
- - To add Windows PowerShell as a profile, choose the Select Default Profile option in the new terminal dropdown 
-   and select the Windows PowerShell item. This will configure the profile and set it as your default.
-#>
+code $profile # Opens Powershell profile in VS Code; leave tab open for the duration of the demo
+Write-Host "Profile was loaded" -ForegroundColor Green # Add this line to the profile
 
 # Install PSReadline
 # https://learn.microsoft.com/en-us/powershell/module/psreadline/about/about_psreadline?view=powershell-7.3
@@ -36,14 +28,14 @@ Install-Module -Name PSReadLine -AllowClobber -Force #Accept if prompted to inst
 # ** Ignore warning about module being in use
 Import-Module PSReadLine # if necessary
 
-# Edit Powershell profile
-code $profile
-
-# Add to profile
+# Add to Powershell profile we opened previously
 Import-Module -Name PSReadline
 Set-PSReadLineOption -PredictionSource HistoryAndPlugin
 Set-PSReadLineOption -PredictionViewStyle ListView
 Set-PSReadLineOption -EditMode Windows
+
+# Refresh Powershell profile
+&$profile
 
 # Install Az.Tools.Predictor
 # https://techcommunity.microsoft.com/t5/azure-tools-blog/announcing-general-availability-of-az-tools-predictor/ba-p/3297956
@@ -80,9 +72,8 @@ Import-Module -Name Terminal-Icons
 # Install OhMyPosh
 winget install JanDeDobbeleer.OhMyPosh -s winget # Close and reopen VS Code after installation
 
-# Add to profile
+# Add to Powershell profile
 oh-my-posh init pwsh | Invoke-Expression
-
 
 # Install a "nerd" font
 oh-my-posh font install # Select Hack NF (or other)
@@ -91,11 +82,9 @@ oh-my-posh font install # Select Hack NF (or other)
 # Change VS Code to use new font
 # -Preferences -> Settings -> "integrated: font family"
 
-# Add to profile
-oh-my-posh init pwsh | Invoke-Expression
-
 # Reload profile
-. $profile
+&$profile
+
 # And BAM! Should be working; how to see additional themes:
 Get-PoshThemes
 
