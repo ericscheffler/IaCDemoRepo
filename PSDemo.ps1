@@ -1,19 +1,24 @@
 <# Starting with a brand new VM #>
 
-# Install VS Code
-https://code.visualstudio.com/Download
-
-# Install Powershell extension
-
-# Get Powershell version
-$PSVersionTable.PSVersion
-
 # Install Winget from MS App Store (recommended way to install PS7, and it's awesome)
 # "App Installer"
 
 # Install Powershell 7.2 or greater
 winget search Microsoft.PowerShell # Agree to source agreements
 winget install Microsoft.PowerShell
+
+# Install VS Code
+winget install Microsoft.VisualStudioCode
+
+# Install Powershell extension in Extensions pane
+
+# Set default shell in VS Code
+<#
+In VS Code Terminal pane, click the down-arrow next to "PowerShell Extension +";
+Choose "Select Default Profile"; in selection box, choose "PowerShell"; this will be the "pwsh.exe" executable.
+#>
+
+# Open new PowerShell 7 terminal session in VS Code; click the "+" button next to "PowerShell Extension" in the Terminal pane
 
 # View Powershell profile location
 $profile
