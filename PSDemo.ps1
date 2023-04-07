@@ -103,7 +103,7 @@ oh-my-posh init pwsh --config 'https://raw.githubusercontent.com/JanDeDobbeleer/
 code --install-extension ms-azuretools.vscode-bicep
 code --install-extension ms-dotnettools.vscode-dotnet-runtime
 code --install-extension ms-vscode.azurecli
-code --install-extensio nms-vscode.powershell
+code --install-extension ms-vscode.powershell
 code --install-extension msazurermtools.azurerm-vscode-tools
 code --install-extension oderwat.indent-rainbow
 code --install-extension shardulm94.trailing-spaces
