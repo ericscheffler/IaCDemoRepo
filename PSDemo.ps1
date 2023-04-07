@@ -99,4 +99,14 @@ Get-PoshThemes
 # Update theme in profile for demo purposes
 oh-my-posh init pwsh --config 'https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/lambdageneration.omp.json' | Invoke-Expression
 
+# Install common VS Code extensions
+code --install-extension ms-azuretools.vscode-bicep
+code --install-extension ms-dotnettools.vscode-dotnet-runtime
+code --install-extension ms-vscode.azurecli
+code --install-extensio nms-vscode.powershell
+code --install-extension msazurermtools.azurerm-vscode-tools
+code --install-extension oderwat.indent-rainbow
+code --install-extension shardulm94.trailing-spaces
+code --install-extension yzhang.markdown-all-in-one
+
 
