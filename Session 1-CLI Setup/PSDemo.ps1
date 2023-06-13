@@ -27,6 +27,9 @@ $profile
 code $profile # Opens Powershell profile in VS Code; leave tab open for the duration of the demo
 Write-Host "Profile was loaded" -ForegroundColor Green # Add this line to the profile
 
+# Install Powershell extension
+code --install-extension ms-vscode.powershell
+
 # Install PSReadline
 # https://learn.microsoft.com/en-us/powershell/module/psreadline/about/about_psreadline?view=powershell-7.3
 Install-Module -Name PSReadLine -AllowClobber -Force #Accept if prompted to install NuGet provider 
