@@ -69,6 +69,10 @@ This completes the last-minute installation steps and adds Git to the PATH
 #>
 # Close and re-open VS Code
 
+# Configure Git Username and Email
+git config --global user.name "Your Name"
+git config --global user.email "youremail@yourdomain.com"
+
 # Install terminal-icons
 Install-Module -Name Terminal-Icons
 
