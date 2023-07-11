@@ -112,4 +112,5 @@ code --install-extension oderwat.indent-rainbow
 code --install-extension shardulm94.trailing-spaces
 code --install-extension yzhang.markdown-all-in-one
 
-
+# Install Azure CLI
+winget install -e --id Microsoft.AzureCLI
