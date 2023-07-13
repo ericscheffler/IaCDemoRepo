@@ -22,6 +22,7 @@ resource buildvnets 'Microsoft.Network/virtualNetworks@2021-05-01' = [for vnet i
 
 
 /*
+sl 'C:\Users\erschef\OneDrive - Microsoft\Code\Demo'
 $rg= "erschef1"
 $template= ".\version4.bicep"
 $params= ".\version4.bicepparam"

@@ -32,6 +32,7 @@ resource vnet 'Microsoft.Network/virtualNetworks@2021-05-01' = {
   }
 }
 /*
+sl 'C:\Users\erschef\OneDrive - Microsoft\Code\Demo'
 $rg= "erschef1"
 $template= ".\version3.bicep"
 $params= ".\version3.bicepparam"
