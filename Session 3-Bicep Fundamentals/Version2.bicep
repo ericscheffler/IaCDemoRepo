@@ -21,17 +21,3 @@ resource vnet 'Microsoft.Network/virtualNetworks@2021-05-01' = {
     ]
   }
 }
-/*
-sl 'C:\Users\erschef\OneDrive - Microsoft\Code\Demo'
-$rg= "erschef1"
-$template= ".\version2.bicep"
-
-az deployment group what-if `
-    --name erschef-terminal-azcli-$(Get-Date -Format "MM-dd-yyyy'_'HHmm") `
-    --resource-group $rg `
-    --template-file $template
-
-az deployment group create `
-    --resource-group $rg `
-    --template-file $template    
-*/
